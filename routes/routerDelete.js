@@ -3,10 +3,9 @@ const routerDelete = express.Router();
 
 const fs = require('fs');
 
-// routerDelete.use(express.json());
-// routerDelete.use(express.urlencoded({ extended: true }));
 
 routerDelete.delete('/deleteRecords/:ind', (req, res) => {
+  
   const index = req.params.ind;
 
   const data = JSON.parse(fs.readFileSync('hospital.json', 'utf8'));

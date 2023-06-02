@@ -11,8 +11,9 @@ routerGet.get('/showRecords',(req,res)=>{
         message: 'The Records are displayed below',
 
         Records: data
-    }
+    };
+
     res.send(response);
-})
+});
 
 module.exports = routerGet;
